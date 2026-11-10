@@ -22,7 +22,7 @@ const [loading, setLoading] = useState(false);
 
   setMessage("");
 
-  fetch("http://localhost:5002/grade", {
+  fetch("https://fallpbl.onrender.com/grade", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
