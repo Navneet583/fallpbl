@@ -1,8 +1,7 @@
 
 import React, { useState } from "react";
-
 import HomePage from "./Design/homepage";
-import GradingPage from "./pages/GradingPage";
+import Chatbot from "./Design/chatbot";
 
 function App() {
   const [page, setPage] = useState("home");
@@ -10,15 +9,11 @@ function App() {
   return (
     <div className="App">
       {page === "home" && (
-        <HomePage
-          onStart={() => setPage("grading")}
-        />
+        <HomePage onStart={() => setPage("chatbot")} />
       )}
 
-      {page === "grading" && (
-        <GradingPage
-          onBack={() => setPage("home")}
-        />
+      {page === "chatbot" && (
+        <Chatbot onBack={() => setPage("home")} />
       )}
     </div>
   );
