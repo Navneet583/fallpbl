@@ -69,6 +69,7 @@ app.post("/grade", async (req, res) => {
   }
 });
 
-app.listen(5002, () => {
-  console.log("Gemini backend running on port 5002");
+const port = process.env.PORT || 5002;
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Gemini backend running on port ${port}`);
 });
